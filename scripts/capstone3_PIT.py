@@ -284,7 +284,7 @@ def plot_pit_histogram(ax, pit_values, title, color="#1b3a57", n_bins=20):
 
 def batch_template_fit_mle_with_posteriors(ds, mu_grid, z_grid, progress_every=200):
     """
-    Wrapper around your existing MLE function that additionally
+    Wrapper around existing MLE function that additionally
     returns the full log_pz array (N, Z) needed for PIT computation.
     Calls template_fit_one_mle directly so we can collect log_pz.
     """
@@ -551,8 +551,7 @@ def main():
 
     # ------------------------------------------------------------------ #
     # Figure 4 — Prior comparison: matched vs misspecified
-    # Shows the two priors on the same axes so the reader can see
-    # exactly how much probability mass is suppressed at high z
+    # Shows the two priors on the same axes 
     # ------------------------------------------------------------------ #
     fig, ax = plt.subplots(figsize=(6.5, 3.8))
     ax.plot(z_grid, matched_probs, color=METHOD_STYLE["MAP"]["color"],
